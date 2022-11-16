@@ -1,20 +1,30 @@
+const form = {
+    eListener : function (id) {
+        document.getElementById(id)
+    },
+    validate : function(listener) {
+        if(listener.value == "") {
+            return false ;
+        }
+    }
+}
+
 function submitData(){
-    // console.log('klik')
-    let name = document.getElementById('name').value
-    let email = document.getElementById('email').value
-    let number = document.getElementById('number').value
-    let subject = document.getElementById('subject').value
-    let message = document.getElementById('message').value
+    let name = form.eListener('name').value
+    let email = form.eListener('email').value
+    let number = form.eListener('number').value
+    let subject = form.eListener("subject").options[form.eListener("subject").selectedIndex].value
+    let message = form.eListener('message').value
     console.log(name, email, number, subject, message);
-    if(name == ''){
+    if(!form.validate(form.eListener("name"))){
         return a();  
-    } else if (email == ''){
+    } else if (!form.validate(form.eListener("email"))){
         return ab();
-    }else if (number == ''){
+    }else if (!form.validate(form.eListener("number"))){
         return abc();
-    }else if(subject == ''){
+    }else if(!form.validate(form.eListener("subject"))){
         return abcd();
-    }else if(message == ''){
+    }else if(!form.validate(form.eListener("message"))){
         return borderMessage();
     }
 
@@ -125,7 +135,3 @@ function addClassMessage(){
     let messageText = document.querySelector('.messagejs');
     messageText.classList.add('message-text')
 }
-
-
-
-
