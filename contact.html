@@ -21,38 +21,38 @@
     </div>
     <!-- End Navbar -->
 
-    <div class="form">
+    <form id="form" class="form">
         <h1>GET IN TOUCH</h1>
+
+        <label >Name</label>
+        <input class="input-name" type="text" id="username" >
+        <div class="eror"></div>
         
-        <label for="">Name</label>
-        <input type="text" oninput="addClassName()" id="name" class="input-warning name-border border-name">
-        <p class="text-warning namejs name-text">Please Input Your Name</p>
+        <label >Email</label>
+        <input class="input-email" type="email" id="email" >
+        <div class="eror"></div>
+
+        <label >Phone Number</label>
+        <input class="input-phone" type="number" id="phone">
+        <div class="eror"></div>
         
-        <label for="">Email</label>
-        <input type="text" oninput="addClassEmail()" id="email" class="input-warning email-border border-email">
-        <p class="text-warning emailjs email-text">Please Input Your Email</p>
-        
-        <label for="">Phone Number</label>
-        <input type="number" oninput="addClassNumber()" id="number" class="input-warning number-border border-number">
-        <p class="text-warning numberjs number-text">Please Input Your Number</p>
-        
-        <label for="">subject</label>
-        <select name="" id="subject" oninput="addClassSubject()" class="input-warning subject-border border-subject">
+        <label >Subject</label>
+        <select class="input-subject" id="subject">
             <option value="">-</option>
-            <option>FrondEnd</option>
-            <option>BackEnd</option>
-            <option>FullStack</option>
+            <option value="front end">front end</option>
+            <option value="back end">back end</option>
+            <option value="full stack">fullstack</option>
         </select>
-        <p class="text-warning subjectjs subject-text">Please select your choice</p>
+        <div class="eror"></div>
         
-        <label for="">Your Message</label>
-        <textarea name="" id="message" oninput="addClassMessage()" cols="30" rows="10" class="input-warning message-border border-message"></textarea>
-        <p class="text-warning messagejs message-text">Please input your message</p>
+        <label >Your Message</label>
+        <textarea class="input-message" id="message" ></textarea>
+        <div class="eror"></div>
         
         <div class="btn-submit">
-            <button type="button" onclick="submitData()">Submit</button>
+            <button type="button" id="submit" onclick="apake()" class="eror">Submit</button>
         </div>
-    </div>
+    </form>
 
     <script src="js/contact.js"></script>
 </body>

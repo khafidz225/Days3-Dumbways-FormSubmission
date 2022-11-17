@@ -182,58 +182,36 @@ icons a img:hover{
 .form h1{
     text-align: center;
 }
-.input-warning{
-    border: 1px solid rgb(252, 101, 101);
-}
-/* Input Name */
-.border-name{
-    border: none;
-}
-.name-text{
-    display: none;
-}
-/* Input Email */
-.border-email{
-    border: none;
-}
-.email-text{
-    display: none;
-}
-/* Input Number */
-.border-number{
-    border: none;
-}
-.number-text{
-    display: none;
-}
-/* Select Subject */
-.border-subject{
-    border: none;
-}
-.subject-text{
-    display: none;
-}
-/* TextArea Message */
-.border-message{
-    border: none;
-}
-.message-text{
-    display: none;
-}
-.text-warning{
-    color: rgb(252, 101, 101);
-    margin-top: 0;
-}
 .form input{
     padding: 10px;
     border-radius: 10px;
+    border: none;
+}
+.form input:focus{
+    outline: 2px solid #2563eb;
 }
 .form select{
     padding: 10px;
     border-radius: 10px;
+    border: none;
+}
+.form select:focus{
+    outline: 2px solid #2563eb;
 }
 .form textarea{
     border-radius: 10px;
+    padding: 14px;
+    border: none;
+    height: 170px;
+    margin-bottom: 14px;
+}
+.form textarea:focus{
+    outline: 2px solid #2563eb;
+}
+.eror{
+    color: red;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .btn-submit{
